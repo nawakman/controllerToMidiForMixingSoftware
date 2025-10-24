@@ -1,0 +1,45 @@
+Here are the bindings I have set on virtual DJ
+The left part is the button/slider name, the right part is the command to bind to this button in the software
+you can use the mappings in the joined XML file, just copy/paste it in the C:\users\YOURNAME\Documents\VirtualDJ\Mappers folder
+
+0-BUTTON0 eq_mode +1
+0-BUTTON32 eq_mode +1
+Same binding for the 2 previous because eq_mode is deck independent
+
+0-BUTTON1 deck left play_button
+0-BUTTON33 deck right play_button
+0-BUTTON6 deck left match_bpm
+0-BUTTON38 deck right match_bpm
+0-BUTTON7 deck left sync
+0-BUTTON39 deck right sync
+0-BUTTON12 deck left loop
+0-BUTTON44 deck right loop
+0-BUTTON28 deck left loop_double
+0-BUTTON60 deck right loop_double
+0-BUTTON30 deck left loop_half
+0-BUTTON62 deck right loop_half
+
+0-SLIDER6 deck left eq_low
+0-SLIDER14 deck right eq_low
+0-SLIDER7 deck left eq_mid
+0-SLIDER15 deck right eq_mid
+0-SLIDER8 deck left eq_high
+0-SLIDER16 deck right eq_high
+0-SLIDER9 deck left pitch
+0-SLIDER17 deck right pitch
+0-SLIDER10 deck left volume
+0-SLIDER18 deck right volume
+0-SLIDER11 deck left effect_colorfx 1 'Filter' 'smallrange'
+0-SLIDER19 deck right effect_colorfx 1 'Filter' 'smallrange'
+0-SLIDER12 deck left effect_colorfx 2 'Flanger' 'smallrange'
+0-SLIDER20 deck right effect_colorfx 2 'Flanger' 'smallrange'
+0-SLIDER13 deck left effect_colorfx 3 'Cut' 'smallrange'
+0-SLIDER21 deck right effect_colorfx 3 'Cut' 'smallrange'
+
+
+
+
+
+
+
+
