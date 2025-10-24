@@ -46,7 +46,7 @@ What if you need the right joystick to adjust a knob on the left deck?
 
 ***
 
-## 📝 Important Notes for Customization
+## 📝 Important Notes
 
 ### NOTE 1: Dual Binding
 You **can bind both joysticks** to the **exact same slider/knob**. This will work without issue.
