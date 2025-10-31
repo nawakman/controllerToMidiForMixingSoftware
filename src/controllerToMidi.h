@@ -54,4 +54,6 @@ class ControllerToMidi{
     bool isControllerConnected();
     //get button state (button 0 to 31)
     bool getButtonState(int button);
+    //temporary button state override
+    void setButtonState(int button, bool state);
 };

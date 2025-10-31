@@ -109,6 +109,8 @@ int main(){
                         if(button==DPAD_LEFT){isRightDeck[1]=false;}else if(button==DPAD_RIGHT){isRightDeck[1]=true;}else{//deck selection
                             controllerAxisToButtonBind[1]=button;//what buttons is pressed first after pressing left top trigger
                             editLeftJoystickYBind=false;
+                            ctm.setButtonState(button,false);//release button so it is only used for binding purposes and not sent afterward as regular input
+                            Sleep(200);//let time for user to remove its finger from the button
                         }
                     }
                 }
@@ -119,6 +121,8 @@ int main(){
                         if(button==DPAD_LEFT){isRightDeck[3]=false;}else if(button==DPAD_RIGHT){isRightDeck[3]=true;}else{//deck selection
                             controllerAxisToButtonBind[3]=button;//what buttons is pressed first after pressing left top trigger
                             editRightJoystickYBind=false;
+                            ctm.setButtonState(button,false);//release button so it is only used for binding purposes and not sent afterward as regular input
+                            Sleep(200);//let time for user to remove its finger from the button
                         }
                     }
                 }

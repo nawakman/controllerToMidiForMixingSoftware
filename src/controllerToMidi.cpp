@@ -88,10 +88,21 @@ bool ControllerToMidi::isControllerConnected() {
 
 bool ControllerToMidi::getButtonState(int button){
     if(button>31){
-        throw runtime_error("Error: button "+to_string(button)+" does not exist, buttons are from 1 to 32");
+        throw runtime_error("Error: button "+to_string(button)+" does not exist, buttons are from 0 to 31");
     }
     if(button>=28){//the d pad is detected as an axis but we want it as buttons //let's say they are the last 4 buttons 29,30,31,32
         return 2*(button-28)==(controllerInfo.dwPOV/4500);//only detects 4 postions not the 8 positions range
     }
     return controllerInfo.dwButtons & (1 << button);//1<<button is 2^button
+}
+
+void ControllerToMidi::setButtonState(int button, bool state) {
+    if (button>31) {
+        throw runtime_error("Error: button "+to_string(button)+" does not exist, buttons are from 0 to 31");
+    }
+    if (state) {
+        controllerInfo.dwButtons |= (1 << button);// Set the corresponding bit
+    } else {
+         controllerInfo.dwButtons &= ~(1 << button);// Clear the corresponding bit
+    }
 }
